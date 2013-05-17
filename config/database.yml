@@ -21,8 +21,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: d4pchjufj137t7
+  database: d2t5b6jogts2tm
   port: 5432
-  host: ec2-23-23-214-251.compute-1.amazonaws.com
-  username: ksvewyaexhrcmp
-  password: qGo8N7Q7iyPNX4EywzaQW6y117
+  host: ec2-54-235-152-226.compute-1.amazonaws.com
+  username: blodyzevenjiih
+  password: 7D9w5WHHRhDiH0EnZy7nqRrHBz
