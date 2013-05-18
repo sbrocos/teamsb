@@ -3,10 +3,15 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass'
 gem 'rspec-rails', '2.11.0'
+gem 'bcrypt-ruby', '3.0.1'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'annotate'
+end
+
+group :test do
+  gem 'factory_girl_rails', '1.4.0'
 end
 
 group :assets do
