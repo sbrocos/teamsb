@@ -6,4 +6,6 @@ Teamsb::Application.routes.draw do
   match "/help",    to: 'static#help'
   match "/about",   to: 'static#about'
 
+  match "signup",   to: 'users#new'
+
 end
