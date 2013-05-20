@@ -119,6 +119,4 @@ describe User do
     before { @user.toggle!(:admin) }
     it { should be_admin}
   end
-
-
 end
