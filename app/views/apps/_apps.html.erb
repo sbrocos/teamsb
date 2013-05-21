@@ -1,3 +1,32 @@
-<li>
-  <span class="content"> <%= @apps.name %></span>
-</li>
+<% cont = 1 %>
+<div class="row-fluid apps">
+  <%= will_paginate @apps %>
+  <ul class="thumbnails">
+    <% @apps.each do |app| %>
+        <% if cont%5 == 0 %>
+            <li class="span3 cinco">
+        <% else %>
+            <li class="span3">
+        <% end %>
+        <div class="thumbnail">
+          <a href="#">
+            <img data-src="holder.js/290x120" alt="">
+          </a>
+          <div class="caption">
+            <h3>
+              <%= app.name %>
+            </h3>
+            <div class="descr_short">
+              <%= app.description_short %>
+            </div>
+          </div>
+          <div class="botonera">
+            <a class="btn btn-primary" href="#">Instalar</a>
+          </div>
+        </div>
+        </li>
+        <% cont += 1 %>
+    <% end %>
+  </ul>
+  <%= will_paginate @apps %>
+</div>

@@ -3,7 +3,7 @@ Teamsb::Application.routes.draw do
 
   resources :users
   resources :sessions , only: [:new, :create, :destroy]
-  resources :apps, only:[:create, :destroy]
+  resources :apps
 
 
   root              to: "static#home"

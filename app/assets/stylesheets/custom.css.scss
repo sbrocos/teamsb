@@ -22,14 +22,12 @@ h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  text-align: center;
 }
 
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-  text-align: center;
   font-weight: normal;
   color: $grayLight;
 }
@@ -138,3 +136,23 @@ input, textarea, select, .uneditable-input {
 }
 
 .field_with_errors { @extend .control-group; @extend .error;}
+
+.apps {
+  list-style: none;
+  margin-top: 10px;
+  li {
+    span.content {
+      font-weight: bold;
+      display: block;
+    }
+    h3 { font-size: 1.2em;}
+  }
+
+}
+
+.apps .span3.cinco { margin-left: 0px; }
+.apps li .thumbnail { height: 265px; overflow: hidden; }
+
+.apps div.descr_short { height: 30px; }
+.apps .caption{ height: 88px; }
+.apps .botonera{ padding-left: 9px; }
