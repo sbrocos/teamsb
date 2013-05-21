@@ -10,7 +10,8 @@
         <% end %>
         <div class="thumbnail">
           <a href="#">
-            <img data-src="holder.js/290x120" alt="">
+            <img data-src="images/1.jpg" alt="">
+            <%= link_to image_tag("/images/#{app.id}.jpg", alt: "logo App"), 'http://rubyonrails.org/' %>
           </a>
           <div class="caption">
             <h3>
@@ -21,7 +22,7 @@
             </div>
           </div>
           <div class="botonera">
-            <a class="btn btn-primary" href="#">Instalar</a>
+            <a class="btm" href="#">Instalar</a>
           </div>
         </div>
         </li>

@@ -3,16 +3,22 @@
 
 /* mixins, variables, etc, */
 $grayLight: #999;
+$grayBasic : #F2F2F2;
 $grayMediumLight: #eaeaea;
 
 /* universal */
 html { overflow-y: scroll; }
-body { padding-top: 60px; }
+body { padding-top: 60px;  background-color: $grayBasic;}
 section { overflow: auto; }
 textarea { resize: vertical; }
 .center {
   text-align: center;
   h1 { margin-bottom: 10px; }
+}
+.page-header{
+  border-bottom: 2px solid #999999;
+  margin-bottom: 5px;
+  h1 { margin-bottom: 10px;  }
 }
 .clearfix { clear: both; }
 /* typography */
@@ -140,19 +146,46 @@ input, textarea, select, .uneditable-input {
 .apps {
   list-style: none;
   margin-top: 10px;
-  li {
-    span.content {
-      font-weight: bold;
-      display: block;
-    }
-    h3 { font-size: 1.2em;}
+  .span3.cinco { margin-left: 0px; }
+  .thumbnail{
+    padding: 5px;
+    background-color: #ffffff;
+    border:none;
   }
-
+  li {
+    span.content { font-weight: bold; display: block; }
+    h3 { font-size: 1.2em; margin: 5px 0px;}
+    .thumbnail {
+      height: 288px;
+      overflow: hidden;
+      .caption {
+        padding: 5px 9px;
+        height: 88px;
+      }
+      .descr_short { height: 30px; }
+      .botonera{ padding-left: 0px; }
+    }
+  }
 }
 
-.apps .span3.cinco { margin-left: 0px; }
-.apps li .thumbnail { height: 265px; overflow: hidden; }
 
-.apps div.descr_short { height: 30px; }
-.apps .caption{ height: 88px; }
-.apps .botonera{ padding-left: 9px; }
+
+.btm {
+  background: #73b5ea;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-radius: 2px 2px 2px 2px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 8px 0px;
+  display: block;
+
+  width: 208px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
+  &:hover {
+    background-color: #a2cfea;
+    text-decoration: none;
+  }
+}
