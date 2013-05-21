@@ -4,6 +4,12 @@ class AppsController < ApplicationController
   end
   def show
     @app = App.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.rss
+    end
+
   end
 
 end

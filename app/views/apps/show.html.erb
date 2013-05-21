@@ -1,2 +1,18 @@
 <% provide(:title, 'APP' ) %>
-<h1>SHOW</h1>
+<div class="showApp">
+    <div class="row-fluid">
+      <h1>APP : <%= @app.name %></h1>
+      <div class="span3">
+        <%= link_to image_tag("/images/#{@app.id}.jpg", alt: "logo App"), app_path(@app.id) %>
+        <a class="btm" href="#">Instalar</a>
+      </div>
+      <div class="span9">
+        <blockquote>
+          <p><%= @app.description_short %></p>
+        </blockquote>
+        <div>
+          <%= @app.description_large %>
+        </div>
+      </div>
+    </div>
+</div>
