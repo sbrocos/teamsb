@@ -1,6 +1,7 @@
 class App < ActiveRecord::Base
   attr_accessible :description_large, :description_short, :name
-  has_and_belongs_to_many  :users
+  has_many :appusers
+  has_many :users, :through => :appusers
 
   validates :name, presence: true, :length => { maximum: 50}
   validates :description_short, presence: true, :length => { maximum: 100}
