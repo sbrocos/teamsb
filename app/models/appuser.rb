@@ -3,4 +3,5 @@ class Appuser < ActiveRecord::Base
   belongs_to :user
   belongs_to :app
 
+  validates :user_id,  presence: true
 end

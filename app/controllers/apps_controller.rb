@@ -13,13 +13,20 @@ class AppsController < ApplicationController
   end
   def instalar
     @app = App.find(params[:id])
-    @app.appusers.create!(user_id: 1)
-    @rel = @app.appusers.build()
 
+    @a = Appuser.find_by_app_id(params[:id])
+
+    if @a != nil
+      @rel = false
+    else
+      @rel = @app.appusers.create!(user_id: 1)
+      @rel = true
+    end
 
     respond_to do |format|
-      format.json { render :json => @rel }
+      format.json  { render :json => @rel }
     end
+
 
 
   end
