@@ -1,7 +1,7 @@
 class AppajaxController < ApplicationController
   respond_to :json
   def index
-    respond_with @apps = App.paginate(:page => params[:page], :per_page => 8)
+    respond_with @apps = Appuser.all()
   end
   def show
     @app = App.find(params[:app_id].to_i)

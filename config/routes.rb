@@ -1,6 +1,6 @@
 Teamsb::Application.routes.draw do
   scope "api" do
-    resources :appsajax
+    resources :appajax
   end
 
   resources :users

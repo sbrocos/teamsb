@@ -19,14 +19,14 @@ class AppsController < ApplicationController
     @a = Appuser.find_by_app_id(params[:id])
 
     if @a != nil
-      @rel = false
+      resultado = { id: 'false'}
     else
       @rel = @app.appusers.create!(user_id: 1)
-      @rel = true
+      resultado = { id: 'true'}
     end
 
     respond_to do |format|
-      format.json  { render :json => @rel }
+      format.json  { render :json => resultado }
     end
   end
 

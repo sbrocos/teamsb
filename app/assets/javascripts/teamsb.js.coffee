@@ -4,7 +4,7 @@ window.Teamsb =
   Views: {}
   Routers: {}
   init: ->
-    new Teamsb.Routers.Apps
+    new Teamsb.Routers.Appusers
     Backbone.history.start()
 
 $(document).ready ->
