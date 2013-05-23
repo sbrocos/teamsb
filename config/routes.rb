@@ -1,9 +1,11 @@
 Teamsb::Application.routes.draw do
-  get "apps/create"
+  scope "api" do
+    resources :apps
+  end
 
   resources :users
   resources :sessions , only: [:new, :create, :destroy]
-  resources :apps
+
 
 
   root              to: "static#home"

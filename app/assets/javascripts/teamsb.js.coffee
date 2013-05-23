@@ -3,7 +3,9 @@ window.Teamsb =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+  init: ->
+    new Teamsb.Routers.Apps
+    Backbone.history.start()
 
 $(document).ready ->
-  Teamsb.initialize()
+  Teamsb.init()
