@@ -14,12 +14,12 @@ class AppajaxController < ApplicationController
     @a = Appuser.find_by_app_id(id)
 
     if @a != nil
-      rel = false
+      resultado = { id: 'false'}
     else
-      @app.appusers.create!(user_id: 1)
-      rel = true
+      @rel = @app.appusers.create!(user_id: 1)
+      resultado = { id: 'true'}
     end
 
-    respond_to rel
+    respond_with @app.appusers.build()
   end
 end
