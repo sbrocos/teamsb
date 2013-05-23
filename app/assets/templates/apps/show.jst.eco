@@ -1,40 +1,24 @@
 <% cont = 0 %>
+<% apps = @apps.models %>
+<% console.log(apps.length) %>
+<% if apps.length > 0 : %>
+<% app = @apps.at(@id) %>
 
-<div class="row-fluid apps">
-  <ul class="thumbnails">
-    <% for app in @apps.models: %>
-        <% if cont%4 == 0: %>
-            <li class="span3 cinco">
-        <% else: %>
-            <li class="span3">
-        <% end %>
-        <div class="thumbnail">
-          <a href="#">
-            <img src="images/<%= app.id %>.jpg" alt="<%= app.get('name') %> image">
-          </a>
-          <div class="caption">
-            <h3>
-              <%= app.get('name') %>
-            </h3>
-            <div class="descr_short">
-              <%= app.get('description_short') %>
-            </div>
-          </div>
-          <div class="botonera">
-            <% if @paso.length != 0: %>
-              <% if typeof @paso.findWhere({app_id: app.id}) == 'undefined' : %>
-                <a id="<%= app.id %>" href="/install/<%= app.id %>.json" class= 'btm install '> Install</a>
-              <% else : %>
-                <a id="<%= app.id %>" href="/install/<%= app.id %>.json" class= 'btm desinstall'> Uninstall</a>
-              <% end %>
-            <% else : %>
-              <a id="<%= app.id %>" href="/install/<%= app.id %>.json" class= 'btm install'> Install</a>
-            <% end %>
-
-          </div>
-        </div>
-        </li>
-        <% cont += 1 %>
-    <% end %>
-  </ul>
+<div class="showApp">
+  <div class="row-fluid">
+    <h1>APP : <%= app.get('name') %></h1>
+    <div class="span3">
+      <img src="/images/<%= app.id %>.jpg" alt= "logo App"/>
+      <a class="btm" href="#">Instalar</a>
+    </div>
+    <div class="span9">
+      <blockquote>
+        <p><%= app.get('description_short') %></p>
+      </blockquote>
+      <div>
+        <%= app.get('description_large') %>
+      </div>
+    </div>
+  </div>
 </div>
+<% end %>

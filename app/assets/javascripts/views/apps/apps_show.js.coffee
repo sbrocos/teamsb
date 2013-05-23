@@ -9,12 +9,12 @@ class Teamsb.Views.AppsShow extends Backbone.View
   initialize: ->
     @collection.on('sync', @render, this)
     @paso = new Teamsb.Collections.Appusers()
+
     @paso.fetch()
     @paso.on('sync', @render, this)
 
   render: ->
-
-    $(@el).html(@template(apps: @collection, paso: @paso))
+    $(@el).html(@template(apps: @collection , paso: @paso, id: @id))
     this
 
   instalar: (event) ->

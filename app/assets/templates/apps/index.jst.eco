@@ -11,7 +11,7 @@
             <li class="span3">
         <% end %>
         <div class="thumbnail">
-          <a href="#">
+          <a href="/#app/<%= app.id %>">
             <img src="images/<%= app.id %>.jpg" alt="<%= app.get('name') %> image">
           </a>
           <div class="caption">

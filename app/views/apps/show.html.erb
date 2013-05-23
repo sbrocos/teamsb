@@ -1,9 +1,4 @@
 <% provide(:title, 'APP' ) %>
-<% rel = Appuser.find_by_app_id(1) %>
-<% if rel %>
-  <%= rel.id %>
-<% end %>
-
 <div class="showApp">
     <div class="row-fluid">
       <h1>APP : <%= @app.name %></h1>

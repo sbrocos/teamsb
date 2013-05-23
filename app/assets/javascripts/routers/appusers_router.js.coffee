@@ -15,7 +15,7 @@ class Teamsb.Routers.Appusers extends Backbone.Router
     $('#Appcontenido').html(view.render().el)
 
   show: (id) ->
-    view = new Teamsb.Views.AppsShow(collection: @coll)
+    view = new Teamsb.Views.AppsShow(collection: @coll, id: id)
     $('#Appcontenido').html(view.render().el)
 
   myapps: ->
