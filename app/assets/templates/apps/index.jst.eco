@@ -1,5 +1,7 @@
 <% cont = 0 %>
-
+<div class="page-header">
+<h1>Apps List</h1>
+</div>
 <div class="row-fluid apps">
   <ul class="thumbnails">
     <% for app in @apps.models: %>

@@ -14,6 +14,7 @@ class Teamsb.Views.AppsMyapp extends Backbone.View
   render: ->
 
     $(@el).html(@template(apps: @collection, paso: @paso))
+    this.delegateEvents()
     this
 
   desinstalar: (event) ->
@@ -25,6 +26,5 @@ class Teamsb.Views.AppsMyapp extends Backbone.View
       colection.create attributes,
         success: ()->
           #reload a lo bruto, pq no se como se hace con backbone y solo el render
-          #location.reload();
-          $(@el).html(@template(apps: @collection, paso: @paso))
-          this
+          location.reload();
+          #colection.on('sync', @render, this)

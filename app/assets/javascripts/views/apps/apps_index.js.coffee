@@ -30,23 +30,6 @@ class Teamsb.Views.AppsIndex extends Backbone.View
           $(self).addClass('desinstall')
 
         error: ->
-          $(self).html('Install')
-          $(self).removeClass('desinstall')
-          $(self).addClass('install')
+          #redirect to signin page, but I don't know how
+          location('/signin');
 
-  desinstalar: (event) ->
-    event.preventDefault()
-    self = event.target
-    if (confirm("Are you sure that you want to 'uninstall' this App?"))
-      attributes = app_id: parseInt($(self).attr('id')), accion: 'delete'
-      colection = new Teamsb.Collections.Appusers()
-      colection.create attributes,
-        success: ()->
-          $(self).html('Install')
-          $(self).removeClass('desinstall')
-          $(self).addClass('install')
-
-        error: ->
-          $(self).html('Uninstall')
-          $(self).removeClass('install')
-          $(self).addClass('desinstall')

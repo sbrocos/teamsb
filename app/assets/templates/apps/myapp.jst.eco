@@ -1,4 +1,7 @@
 <% cont = 0 %>
+<div class="page-header">
+<h1>My Apps List</h1>
+</div>
 <% if @paso.length > 0 : %>
 <div class="row-fluid apps">
   <ul class="thumbnails">
