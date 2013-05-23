@@ -1,5 +1,5 @@
-<%= @apps.length %>
 <% cont = 0 %>
+
 <div class="row-fluid apps">
   <ul class="thumbnails">
     <% for app in @apps.models: %>
@@ -21,7 +21,16 @@
             </div>
           </div>
           <div class="botonera">
-            <a href="/install/<%= app.id %>.json" class= 'btm'> Install</a>
+            <% if @paso.length != 0: %>
+              <% if typeof @paso.findWhere({app_id: app.id}) == 'undefined' : %>
+                <a id="<%= app.id %>" href="/install/<%= app.id %>.json" class= 'btm install '> Install</a>
+              <% else : %>
+                <a id="<%= app.id %>" href="/install/<%= app.id %>.json" class= 'btm desinstall'> Uninstall</a>
+              <% end %>
+            <% else : %>
+              <a id="<%= app.id %>" href="/install/<%= app.id %>.json" class= 'btm install'> Install</a>
+            <% end %>
+
           </div>
         </div>
         </li>
