@@ -12,4 +12,3 @@ class Teamsb.Routers.Appusers extends Backbone.Router
     view = new Teamsb.Views.AppsIndex(collection: @coll)
     $('#Appcontenido').html(view.render().el)
 
-

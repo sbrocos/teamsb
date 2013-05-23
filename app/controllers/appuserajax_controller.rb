@@ -10,9 +10,9 @@ class AppuserajaxController < ApplicationController
   def create
     @id = params[:app_id]
 
-    if params[:action] == 'delete'
-      Appuser.find_by_app_id(@id).destroy
-      respond_with @app = App.find(@id)
+    if params[:accion] == 'delete'
+      Appuser.find_by_app_id(params[:app_id]).destroy
+      respond_with App.find(1)
     else
       rel = Appuser.find_by_app_id(@id)
       if rel
@@ -23,5 +23,6 @@ class AppuserajaxController < ApplicationController
       end
       respond_with @app
     end
+
   end
 end
