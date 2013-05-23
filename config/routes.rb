@@ -1,10 +1,11 @@
 Teamsb::Application.routes.draw do
   scope "api" do
-    resources :apps
+    resources :appsajax
   end
 
   resources :users
   resources :sessions , only: [:new, :create, :destroy]
+  resources :apps
 
 
 
