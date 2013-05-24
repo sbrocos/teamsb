@@ -10,7 +10,6 @@ window.Teamsb =
 $(document).ready ->
   Teamsb.init()
   $('ul.nav a').click(func= (event) ->
-      event.preventDefault()
       resetNav()
       $(this).parent().addClass('active')
   )
