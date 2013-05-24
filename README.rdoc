@@ -1,3 +1,8 @@
+== Welcome to teamsb
+The project has 2 branch,
+'master' is only rails
+'backbone_2' rails with backbone
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
