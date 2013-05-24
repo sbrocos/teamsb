@@ -9,3 +9,14 @@ window.Teamsb =
 
 $(document).ready ->
   Teamsb.init()
+  $('.nav a').click(func= ->
+      $(this).addClass('active')
+  )
+
+
+
+
+
+
+resetNav = ->
+  $('.nav a').removeClass('active')

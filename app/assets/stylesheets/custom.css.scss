@@ -20,6 +20,27 @@ textarea { resize: vertical; }
   margin-bottom: 5px;
   h1 { margin-bottom: 10px;  }
 }
+
+.btm {
+  background: #73b5ea;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-radius: 2px 2px 2px 2px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 8px 0px;
+  display: block;
+
+  width: 208px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
+  &:hover {
+    background-color: #a2cfea;
+    text-decoration: none;
+  }
+}
+
 .clearfix { clear: both; }
 /* typography */
 h1, h2, h3, h4, h5, h6 { line-height: 1;}
@@ -173,25 +194,8 @@ input, textarea, select, .uneditable-input {
 }
 
 
-
-.btm {
+.btm.install {
   background: #73b5ea;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  border-radius: 2px 2px 2px 2px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
-  padding: 8px 0px;
-  display: block;
-
-  width: 208px;
-  text-align: center;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  color: #fff;
-  &:hover {
-    background-color: #a2cfea;
-    text-decoration: none;
-  }
 }
 .btm.desinstall {
   background: #35df6b;
@@ -206,5 +210,15 @@ blockquote {
   p {
     font-style: italic;
     font-size: 1.1em;
+  }
+}
+
+#Appcontenido {
+
+  .loader {
+    margin: 160px auto;
+    width: 128px;
+    height: 128px;
+    background: url('/images/382.gif') no-repeat;
   }
 }
