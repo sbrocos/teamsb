@@ -28,8 +28,10 @@ class Teamsb.Views.AppsIndex extends Backbone.View
           $(self).html('Uninstall')
           $(self).removeClass('install')
           $(self).addClass('desinstall')
+          $(self).blur()
 
         error: ->
+          $(self).blur()
           #redirect to signin page, but I don't know how
           location('/signin');
 

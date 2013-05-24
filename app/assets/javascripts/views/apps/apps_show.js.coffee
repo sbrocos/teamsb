@@ -28,11 +28,13 @@ class Teamsb.Views.AppsShow extends Backbone.View
           $(self).html('Uninstall')
           $(self).removeClass('install')
           $(self).addClass('desinstall')
+          $(self).blur()
 
         error: ->
           $(self).html('Install')
           $(self).removeClass('desinstall')
           $(self).addClass('install')
+          $(self).blur()
 
   desinstalar: (event) ->
     event.preventDefault()
@@ -45,8 +47,10 @@ class Teamsb.Views.AppsShow extends Backbone.View
           $(self).html('Install')
           $(self).removeClass('desinstall')
           $(self).addClass('install')
+          $(self).blur()
 
         error: ->
           $(self).html('Uninstall')
           $(self).removeClass('install')
           $(self).addClass('desinstall')
+          $(self).blur()

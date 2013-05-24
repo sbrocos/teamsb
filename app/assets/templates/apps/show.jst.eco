@@ -9,7 +9,7 @@
     <h1>APP : <%= app.get('name') %></h1>
     <div class="span3">
       <img src="/images/<%= app.id %>.jpg" alt= "logo App"/>
-      <a class="btm" href="#">Instalar</a>
+      <a id="<%= app.id %>" class="btm install" href="#">Instalar</a>
     </div>
     <div class="span9">
       <blockquote>
