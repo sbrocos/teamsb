@@ -1,0 +1,2 @@
+
+<a href="#" class="btm">  <%= @appusers.findWhere({app_id: '1'}) %> </a>
